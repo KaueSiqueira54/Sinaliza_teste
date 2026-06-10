@@ -326,7 +326,7 @@
 }
 
 /* ── Mobile ── */
-@media (max-width: 480px) {
+@media (max-width: 620px) {
   .otto-janela {
     width: calc(100vw - 24px);
     height: calc(100vh - 80px);
