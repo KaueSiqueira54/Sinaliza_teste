@@ -2,7 +2,7 @@
   position: fixed;
   bottom: 10px;
   margin: 5px;
-  z-index: 9998;
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -329,13 +329,12 @@
 @media (max-width: 620px) {
   .otto-janela {
     width: calc(100vw - 24px);
-    height: calc(100vh - 80px);
+    height: 80vh;
     border-radius: 16px;
     right: 12px;
   }
 
   .otto-wrapper {
     margin: 5px;
-    top: 5px;
   }
 }
