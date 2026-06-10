@@ -1,0 +1,22 @@
+/* Reset CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --azul_escuro: rgba(1, 11, 64, 1);
+  --azul_n: rgba(2, 55, 89, 0.8);
+  --azul_claro: #023759;
+  --amarelo: #f5b942;
+  --cinza: #2b373f;
+  --branco_puro: #ffff;
+  --branco: rgba(233, 239, 242, 1);
+  --azul_oc: #345f7a;
+  --preto: #000;
+  --fonte_lexend: "Lexend";
+  --fonte_inter: "Inter";
+}

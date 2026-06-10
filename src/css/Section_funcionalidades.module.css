@@ -1,0 +1,139 @@
+@import url(../css/Global.css);
+
+.sec_funcionalidades {
+  width: 100%;
+  height: auto;
+  position: relative; /* ← âncora para o absolute da imagem */
+  overflow: hidden;
+  z-index: 2;
+  margin-top: -5%;
+}
+
+/* Imagem de fundo */
+.imagem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* ← atrás de tudo */
+}
+
+/* Conteúdo na frente */
+.funcionalidades {
+  position: relative;
+  z-index: 1; /* ← na frente da imagem */
+  width: 100%;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Itens */
+
+.container_itens {
+  width: 80%;
+  height: 350px;
+}
+
+.container_itens h1 {
+  color: var(--amarelo);
+  text-align: center;
+  font-family: var(--fonte_lexend); /* ← era --fonte_Jakarta */
+  color: var(--azul_claro);
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+/* Container func */
+
+.container_func {
+  width: 90%;
+  height: 250px;
+  margin: 5% auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.func {
+  width: 30%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background: var(--branco_puro);
+  box-shadow: 0 4px 4px 3px rgba(0, 0, 0, 0.25);
+}
+
+.func h3 {
+  color: var(--azul_escuro);
+  text-align: center;
+  font-family: var(--fonte_inter); /* ← era --fonte_Nunito */
+  text-align: center;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* mobile */
+
+@media (max-width: 900px) {
+  .funcionalidades {
+    height: 950px;
+  }
+
+  .imagem {
+    display: none;
+  }
+
+  .container_func {
+    height: auto;
+  }
+
+  .container_itens {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 800px;
+    gap: 20px;
+  }
+
+  .func {
+    height: 200px;
+  }
+  .imagem_func {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .imagem_func img {
+    width: 60%;
+  }
+
+  .container_itens h1 {
+    font-size: 24px;
+  }
+
+  .container_func {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .func {
+    width: 100%;
+  }
+
+  .func h3 {
+    font-size: 18px;
+  }
+}

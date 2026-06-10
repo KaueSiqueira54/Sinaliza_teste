@@ -1,0 +1,295 @@
+@import url(../css/Global.css);
+
+/* Header */
+
+.links_nav nav a:hover {
+  cursor: pointer;
+  color: var(--amarelo);
+  transition: 0.1s;
+}
+
+.header_principal {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  background-color: var(--azul_n);
+  backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  z-index: 5;
+}
+
+/* Container nav */
+
+.container_nav {
+  width: 90%;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Container logo */
+
+.logo_container {
+  width: auto; /* Ajustado para não espremer o conteúdo */
+  height: 80px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Logo (Container da imagem) */
+
+.logo {
+  width: 100px;  /* Tamanho fixo da largura da imagem */
+  height: 80px; /* Tamanho fixo da altura da imagem */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo_container h1 {
+  color: var(--branco);
+  font-family: var(--fonte_inter);
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.logo_container span {
+  color: var(--amarelo);
+}
+
+/* Imagem da logo */
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Garante que a imagem não mude de proporção ou distorça */
+}
+
+/* Links nav */
+
+.links_nav {
+  width: 60%;
+  height: 80px;
+}
+
+/* Nav links */
+
+.links_nav nav {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.links_nav nav a {
+  position: relative;
+  text-decoration: none;
+  color: var(--branco_puro);
+  font-family: var(--fonte_inter);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: fit-content; 
+}
+
+/* Aplica a linha apenas nos links do desktop que NÃO possuem a classe .button */
+.links_nav nav a:not(.button)::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--amarelo);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Ativa a expansão da linha no hover apenas se NÃO for .button */
+.links_nav nav a:not(.button):hover::after {
+  transform: scaleX(1);
+}
+
+/* Button */
+
+.links_nav nav .button {
+  width: 20%;
+  height: 40px;
+  border-radius: 47px;
+  background-color: var(--amarelo);
+  color: var(--azul_escuro);
+  font-family: var(--fonte_inter);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links_nav nav .button:hover {
+  background-color: var(--branco);
+  transition: 0.2s;
+  cursor: pointer;
+  color: var(--azul_escuro);
+}
+
+/* ===== HAMBÚRGUER ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 101;
+}
+
+.hamburger span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: var(--branco);
+  border-radius: 3px;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.span_aberto_1 {
+  transform: translateY(9px) rotate(45deg);
+}
+.span_aberto_2 {
+  opacity: 0;
+}
+.span_aberto_3 {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* ===== OVERLAY ===== */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 98;
+}
+
+/* ===== DRAWER ===== */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60%;
+  max-width: 320px;
+  height: 100vh;
+  border-radius: 20px 0px 0px 20px;
+  background-color: var(--azul_claro);
+  z-index: 99;
+  padding-top: 100px;
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
+}
+
+.drawer_aberto {
+  transform: translateX(0);
+}
+
+/* ===== LINKS DO DRAWER ===== */
+.drawer_nav {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 32px;
+}
+
+.drawer_nav a {
+  position: relative;
+  text-decoration: none;
+  color: var(--branco_puro);
+  font-family: var(--fonte_inter);
+  font-size: 22px;
+  font-weight: 400;
+  width: fit-content; 
+  padding-bottom: 4px;
+}
+
+/* Efeito da linha nascendo do centro para os links do mobile (exceto o botão) */
+.drawer_nav a:not(.button)::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--amarelo);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.drawer_nav a:not(.button):hover::after {
+  transform: scaleX(1);
+}
+
+.drawer_nav a:hover {
+  color: var(--amarelo);
+  transition: 0.1s;
+}
+
+.drawer_nav .button {
+  width: 100%;
+  height: 44px;
+  border-radius: 47px;
+  background-color: var(--amarelo);
+  color: var(--azul_escuro);
+  font-family: var(--fonte_inter);
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drawer_nav .button:hover {
+  background-color: var(--branco_puro);
+  color: var(--azul_escuro);
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+/* ===== MEDIA QUERY ===== */
+@media (max-width: 1070px) {
+  .links_nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .logo_container {
+    width: auto; /* Mantém o container fluído no mobile */
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 470px) {
+  .logo_container h1 {
+    font-size: 35px;
+  }
+}

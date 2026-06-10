@@ -1,0 +1,194 @@
+@import url(../css/Global.css);
+
+.sec {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--azul_escuro);
+}
+
+/* Imagem equipe */
+.image_equipe {
+  width: 100%;
+  height: auto;
+}
+
+.image_equipe img {
+  width: 100%;
+  height: auto;
+}
+
+/* Texto */
+.text {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-color: var(--amarelo);
+  top: -2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.text h2 {
+  width: 70%;
+  color: var(--azul_escuro);
+  text-align: center;
+  font-family: var(--Fonte_Nunito);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* Cards */
+.person_cont {
+  width: 100%;
+  height: 600px;
+  background-color: var(--azul_escuro);
+  display: flex;
+}
+
+/* Animações de entrada e saída */
+.entrando {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.saindo {
+  animation: fadeOut 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+}
+
+/* Foto */
+.foto {
+  width: 60%;
+  height: 600px;
+}
+
+.foto img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+/* Info do membro */
+.name {
+  width: 40%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 80%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.container h1 {
+  color: var(--branco_puro);
+  font-family: var(--fonte_Prosto);
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.container h3 {
+  color: var(--branco_puro);
+  font-family: var(--fonte_Jakarta);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+/* Habilidades */
+.hab {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.hab img {
+  width: 60px;
+  height: 60px;
+}
+
+/* Contato */
+.contact {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact a {
+  display: flex;
+  align-items: center;
+}
+
+/* Bolinhas de navegação */
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 0;
+  background-color: var(--azul_escuro);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.dot_ativo {
+  background-color: var(--amarelo);
+  transform: scale(1.4);
+}
+
+.dot:hover:not(.dot_ativo) {
+  background-color: rgba(255, 255, 255, 0.5);
+}
