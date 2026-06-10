@@ -8,7 +8,11 @@ const port = 3000;
 
 app.use(
   cors({
-    origin: "http://localhost:5173", // só aceita o React
+    origin: [
+      "http://localhost:5173",
+      "https://sinalizaai.netlify.app",
+      "https://sinali.netlify.app/",
+    ],
   }),
 );
 app.use(express.json());
