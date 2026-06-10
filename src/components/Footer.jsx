@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "../css/Footer.module.css";
-import Logo from "../assets/header/logo_oficial.png";
+import Logo from "../assets/Header/logo_oficial.png";
 import Insta from "../assets/Footer/Instagram.png";
 import InstaAmarelo from "../assets/Footer/instagram_logo_amarela.png";
 import Git from "../assets/Footer/GitHub.png";
