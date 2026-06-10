@@ -11,7 +11,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "https://sinalizaai.netlify.app",
-      "https://sinali.netlify.app/",
+      "https://sinali.netlify.app",
     ],
   }),
 );
