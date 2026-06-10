@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import ottoImg from "../../assets/Mascote/otto.png"; // coloque a imagem na pasta assets
-import "./OttoChatbot.css";
+import "./OttoChatBot.css";
 
 export default function OttoChatbot() {
   const [aberto, setAberto] = useState(false);
